@@ -1,0 +1,42 @@
+1.
+With bike_cte as (
+Select client_number,rank() over (partationed by client _id order by client-id) rk
+From bikes
+)
+Delete from bike_cte
+Where rk > 2
+
+
+
+2. 
+MERGE CLIENT_TARGET AS target
+USING CLIENT AS source
+ON target.CLIENT_NUMBER = source.CLIENT_NUMBER
+WHEN MATCHED THEN
+    UPDATE SET 
+        target.address1 = source.address1,
+        target.birth_date = source.birth_date
+WHEN NOT MATCHED BY TARGET THEN
+    INSERT (PK_id, CLIENT_NUMBER, address1)
+    VALUES (source.PK_id, source.CLIENT_NUMBER, source.address1);
+
+3. 
+select * from CLIENT
+except 
+select * from CLIENt_Target
+
+4. 
+Select Client_Number,Client_Ref,Rank() over (partitioned by Client_Number,Client_ref order by Client_Number,Client_Ref)  as Rank,
+Dense_Rank() over (partitioned by Client_Number,Client_ref order by Client_Number,Client_Ref) as Dense_Rank,
+Row_Number() over (partitioned by Client_Number,Client_ref order by Client_Number,Client_Ref) as Row_Number from Client
+
+5.
+
+Select datediff(dd,license_date,dateadd(dd,-1,cast(getdate() as date)) from Client
+
+6.
+Select substring(email,charindex('@',email)+1,len(email)-charindex('@',email)) as EmailDomain from Client
+
+7.
+
+Select convert(date,licence_date,103) from Client
