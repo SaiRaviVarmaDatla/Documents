@@ -1,0 +1,6 @@
+DBA Name,Week 1 Tasks,Week 2 Tasks,Week 3 Tasks,Week 4 Tasks,Notes / Capacity
+Alice,"On-Call, Daily Support, Ticket Triage","Project A (DB Design), Code Review","Project A, Performance Tuning","Backup Automation, Documentation",100% allocated
+Bob,"Patch Production Servers, Index Review","On-Call, Health Checks",Project B (Migration Planning),Project B,Medium load
+Carol,"Report Generation, Security Audit",Vacation,"On-Call, Capacity Review","Support, Index Optimization",Limited availability
+Dan,"Daily Support, Monitoring Setup","Capacity Planning, DR Drill Prep",Project A Assistance,"On-Call, Root Cause Analysis",90% allocated
+Eve,"SQL Query Review, Knowledge Sharing","Support, Troubleshooting",Project C (HA Setup),"Support, Patch UAT",Junior DBA – on mentorship
